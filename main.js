@@ -216,13 +216,12 @@ function spinWheel() {
         return;
     }
     
-    const isAsena = isAsenaName(nameValue);
+    const isAsena = false;
     
     // مخفی کردن نتایج قبلی
     resultDisplay.classList.add('hidden');
     specialMessage.classList.add('hidden');
     
-    // اجرای چرخش برای همه (حتی آسنا)
     isSpinning = true;
     spinBtn.disabled = true;
     
