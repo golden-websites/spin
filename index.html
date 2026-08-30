@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#667eea">
+    <title>چرخه شانس جشن ولادت</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="main-title">🎉 چرخه شانس جشن ولادت 🎉</h1>
+                <p class="subtitle">به مناسبت ولادت رسول اکرم و امام صادق (علیهم السلام)</p>
+                <div class="stars">⭐ 🌟 ⭐ 🌟 ⭐</div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="content-wrapper">
+            
+            <!-- Left Section - Wheel -->
+            <section class="wheel-section">
+                <div class="wheel-card">
+                    <div class="wheel-container">
+                        <div class="light-effect"></div>
+                        <div class="pointer"></div>
+                        <canvas id="wheelCanvas" width="400" height="400" style="display: block;"></canvas>
+                    </div>
+                    
+                    <div class="controls">
+                        <div class="name-input-group">
+                            <label for="nameInput">👤 نام شما:</label>
+                            <input 
+                                type="text" 
+                                id="nameInput" 
+                                placeholder="نام خود را وارد کنید..."
+                                maxlength="50"
+                                autocomplete="off"
+                            >
+                            <span class="input-hint">نام فارسی یا انگلیسی می‌توانید وارد کنید</span>
+                            <span id="spinCounter" class="spin-counter">چرخش‌های باقی: -</span>
+                        </div>
+
+                        <button id="spinBtn" class="spin-button">
+                            <span class="spin-icon">🎡</span>
+                            <span class="spin-text">چرخه را بچرخان!</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Section - Info & Results -->
+            <section class="info-section">
+                
+                <!-- Welcome Card -->
+                <div class="welcome-card">
+                    <h2>🎁 خوش‌آمدید!</h2>
+                    <p>با وارد کردن نام خود و فشردن دکمه شرکت کنید و شانس خود را امتحان کنید!</p>
+                </div>
+
+                <!-- Result Display -->
+                <div id="resultDisplay" class="result-card hidden">
+                    <div class="result-header">
+                        <span class="result-icon">🎊</span>
+                        <h3>نتیجه چرخش</h3>
+                    </div>
+                    <div id="resultMessage" class="result-message"></div>
+                    <div class="result-footer">
+                        <p>لطفاً برای ادامه با تیم پشتیبانی ما تماس بگیرید 📞</p>
+                    </div>
+                </div>
+
+                <!-- Special Message for Asena -->
+                <div id="specialMessage" class="special-message-card hidden">
+                    <div class="special-animation">
+                        <div class="heart">💜</div>
+                        <div class="heart">💙</div>
+                        <div class="heart">💚</div>
+                        <div class="heart">💛</div>
+                        <div class="heart">🧡</div>
+                        <div class="heart">❤️</div>
+                    </div>
+                    <h2 class="special-text">بیا یکم گوشیمو نگه دار</h2>
+                    <p class="special-subtitle">پیامی ویژه برای تو... 🌟</p>
+                </div>
+
+                <!-- Prizes Section -->
+                <div class="prizes-card">
+                    <div class="prizes-header">
+                        <h3>🏆 جوایز موجود</h3>
+                        <span class="prize-count">12 جایزه</span>
+                    </div>
+                    <div class="prizes-grid">
+                        <div class="prize-item">
+                            <span class="prize-icon">📱</span>
+                            <span class="prize-text">CoD Mobile Level 200</span>
+                        </div>
+                        <div class="prize-item">
+                            <span class="prize-icon">📱</span>
+                            <span class="prize-text">CoD Mobile Level 300</span>
+                        </div>
+                        <div class="prize-item">
+                            <span class="prize-icon">📱</span>
+                            <span class="prize-text">CoD Mobile Level 400</span>
+                        </div>
+                        <div class="prize-item">
+                            <span class="prize-icon">💰</span>
+                            <span class="prize-text">CP 100</span>
+                        </div>
+                        <div class="prize-item">
+                            <span class="prize-icon">💰</span>
+                            <span class="prize-text">CP 200</span>
+                        </div>
+                        <div class="prize-item">
+                            <span class="prize-icon">💰</span>
+                            <span class="prize-text">CP 500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="info-card">
+                    <h3>ℹ️ نکات مهم</h3>
+                    <ul class="info-list">
+                        <li>✓ هر نفر فقط یکبار می‌تواند شرکت کند</li>
+                        <li>✓ برای دریافت جایزه نام حقیقی خود را وارد کنید</li>
+                        <li>✓ بعد از چرخش با تیم ما تماس بگیرید</li>
+                        <li>✓ شانس برابر برای همه!</li>
+                    </ul>
+                </div>
+
+
+
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>🎊 جشنی برای همه 🎊</p>
+            <p class="footer-sub">© 1405 - تمام حقوق محفوظ است</p>
+        </footer>
+
+    </div>
+
+    <script src="config.js"></script>
+    <script src="utils.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
