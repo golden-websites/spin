@@ -11,11 +11,11 @@ const CONFIG = {
 
     // Special names (case-insensitive, Farsi and English supported)
     specialNames: [
-        'میخوام گوشیتو نگه دارم'
+        'پیام ویژه'
     ],
 
-    // Special message for Asena
-    specialMessage: 'بیا یکم گوشیمو نگه دار',
+    // Special message
+    specialMessage: 'پیام ویژه',
     specialSubtitle: 'پیامی ویژه برای تو... 🌟',
 
     // Game settings
