@@ -11,12 +11,7 @@ const CONFIG = {
 
     // Special names (case-insensitive, Farsi and English supported)
     specialNames: [
-        'ASENA',
-        'Asena',
-        'asena',
-        'asna',
-        'آسنا',
-        'اسنا'
+        'میخوام گوشیتو نگه دارم'
     ],
 
     // Special message for Asena
